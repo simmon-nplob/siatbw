@@ -10,52 +10,52 @@ This program was created so that it can be checked at once using the smartctl pr
     # cp runSIATBW /usr/bin/
     # runSIATBW
 
-root@missA:/home/simmon# ./runSIATBW
-SCAN Your Disk INFO
-staus sata or sas
-sda: 238.47 GiB, 256060514304 bytes, 500118192 sectors
-sdb: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
-sdc: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
-sdd: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
--------------------------------------------------------------------------
-status nvme
--------------------------------------------------------------------------
+    root@missA:/home/simmon# ./runSIATBW
+    SCAN Your Disk INFO
+    staus sata or sas
+    sda: 238.47 GiB, 256060514304 bytes, 500118192 sectors
+    sdb: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
+    sdc: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
+    sdd: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
+    -------------------------------------------------------------------------
+    status nvme
+    -------------------------------------------------------------------------
                                                                          
-CHECK or SCAN Disk Name  sda sdb 
-OK, Enter your device name above: sda sdb sdc sdd
+    CHECK or SCAN Disk Name  sda sdb 
+    OK, Enter your device name above: sda sdb sdc sdd
                                                                          
-TEST number of your Disk : 4
+    TEST number of your Disk : 4
                                                                          
-Input Device Name:  sda 
-RAW Date Value - PROCESSING                        
--------------------------------------------------------------------------
-on_time: 1994  wear_count: 99  lbs_written: 3968445094
- Spin_Up_Time   Start_Stop_Count: 
- TBW-usage: 1892.3 GB [ 1.84795 TB ]
- TBW  Device Name: SamsungSSD860PRO  sda test completed
--------------------------------------------------------
-Input Device Name:  sdb 
-RAW Date Value - PROCESSING                        
--------------------------------------------------------------------------
-on_time: 340  wear_count:   lbs_written: 
- Spin_Up_Time   Start_Stop_Count: 188
- TBW-usage:  GB [ 0 TB ]
- TBW  Device Name: HGSTHUS722T1TALA604  sdb test completed
--------------------------------------------------------
-Input Device Name:  sdc 
-RAW Date Value - PROCESSING                        
--------------------------------------------------------------------------
-on_time: 199  wear_count:   lbs_written: 
- Spin_Up_Time   Start_Stop_Count: 74
- TBW-usage:  GB [ 0 TB ]
- TBW  Device Name: HGSTHUS722T1TALA604  sdc test completed
--------------------------------------------------------
-Input Device Name:  sdd 
-RAW Date Value - PROCESSING                        
--------------------------------------------------------------------------
-on_time: 182  wear_count:   lbs_written: 
- Spin_Up_Time   Start_Stop_Count: 74
- TBW-usage:  GB [ 0 TB ]
- TBW  Device Name: HGSTHUS722T1TALA604  sdd test completed
--------------------------------------------------------
-S-I-A-T-B-W-Program-Terminated-------------------------💗system by simmon
+    Input Device Name:  sda 
+    RAW Date Value - PROCESSING                        
+    -------------------------------------------------------------------------
+    on_time: 1994  wear_count: 99  lbs_written: 3968445094
+     Spin_Up_Time   Start_Stop_Count: 
+     TBW-usage: 1892.3 GB [ 1.84795 TB ]
+     TBW  Device Name: SamsungSSD860PRO  sda test completed
+    -------------------------------------------------------
+    Input Device Name:  sdb 
+    RAW Date Value - PROCESSING                        
+    -------------------------------------------------------------------------
+    on_time: 340  wear_count:   lbs_written: 
+     Spin_Up_Time   Start_Stop_Count: 188
+     TBW-usage:  GB [ 0 TB ]
+     TBW  Device Name: HGSTHUS722T1TALA604  sdb test completed
+    -------------------------------------------------------
+    Input Device Name:  sdc 
+    RAW Date Value - PROCESSING                        
+    -------------------------------------------------------------------------
+    on_time: 199  wear_count:   lbs_written: 
+     Spin_Up_Time   Start_Stop_Count: 74
+     TBW-usage:  GB [ 0 TB ]
+     TBW  Device Name: HGSTHUS722T1TALA604  sdc test completed
+    -------------------------------------------------------
+    Input Device Name:  sdd 
+    RAW Date Value - PROCESSING                        
+    -------------------------------------------------------------------------
+    on_time: 182  wear_count:   lbs_written: 
+     Spin_Up_Time   Start_Stop_Count: 74
+     TBW-usage:  GB [ 0 TB ]
+     TBW  Device Name: HGSTHUS722T1TALA604  sdd test completed
+    -------------------------------------------------------
+    S-I-A-T-B-W-Program-Terminated-------------------------💗system by simmon
