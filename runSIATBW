@@ -31,13 +31,12 @@ echo "-------------------------------------------------------------------------"
 
 for SYDND in "${SYDND[@]}"
 
-
 do
 
 echo "-------------------------------------------------------------------------"
   printf "${WHITE}Input Device Name: ${BLUE} $SYDND ${WHITE}\n"
   printf "RAW Date Value - PROCESSING                       \n"
-  BASinfo=$(smartctl -a /dev/${SYDND}
+  BASinfo=$(smartctl -a /dev/${SYDND})
   rawinfo=`echo "$BASinfo"|awk '/Total_LBAs_Written/ {print $10*512/1024/1024/1024}'`
   NAME=`echo "$BASinfo"|awk '/Device Model/ {print $3 $4 $5 $6}'`
   On_Time=`echo "$BASinfo"|awk '/Power_On_Hours/ {print $10}'`
