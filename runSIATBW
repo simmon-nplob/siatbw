@@ -35,9 +35,9 @@ for SYDND in "${SYDND[@]}"
 do
 
 echo "-------------------------------------------------------------------------"
-  printf "${WHITE} Input Device Name: ${BLUE} $SYDND ${WHITE}\n"
-  printf "RAW Date Value - PROCESSING                        \n"
-  BASinfo=$(smartctl -a /dev/${SYDND})
+  printf "${WHITE}Input Device Name: ${BLUE} $SYDND ${WHITE}\n"
+  printf "RAW Date Value - PROCESSING                       \n"
+  BASinfo=$(smartctl -a /dev/${SYDND}
   rawinfo=`echo "$BASinfo"|awk '/Total_LBAs_Written/ {print $10*512/1024/1024/1024}'`
   NAME=`echo "$BASinfo"|awk '/Device Model/ {print $3 $4 $5 $6}'`
   On_Time=`echo "$BASinfo"|awk '/Power_On_Hours/ {print $10}'`
@@ -53,6 +53,7 @@ echo "-------------------------------------------------------------------------"
   NV_WRITE=`echo "$BASinfo"|awk '/Data Units Written/ {print $5 $6}'`
   NV_READ=`echo "$BASinfo"|awk '/Data Units Read/ {print $5 $6}'`
   TBW=`echo $rawinfo|awk '{print $1/1024}'`
+
   printf "on_time: ${RED} ${NV_On_Time} ${On_Time} ${WHITE} Power_Cycle_Count: ${BLUE} ${NV_Power} ${Power_Cycle} ${WHITE}\n"
   printf "NVME Disk - DATA Units Written: ${BLUE} ${NV_WRITE} ${WHITE} DATA Units Read: ${BLUE} ${NV_READ} ${WHITE}\n"
   printf "SDD  Disk - Wear_Leveling_Count: ${BLUE} ${Wear_Count} ${WHITE} POR_Recovery_Count: ${BLUE} ${POR_Count} ${WHITE} lbs_written:${BLUE} ${Lbs_Written} ${WHITE}\n"
