@@ -10,7 +10,7 @@
     # cp runSIATBW /usr/bin/
     # runSIATBW
 
-    root@missA:/home/simmon# ./runSIATBW
+    root@missA:/home/simmon/siatbw# ./runSIATBW 
     SCAN Your Disk INFO
     staus sata or sas
     sda: 238.47 GiB, 256060514304 bytes, 500118192 sectors
@@ -23,39 +23,43 @@
                                                                          
     CHECK or SCAN Disk Name  sda sdb 
     OK, Enter your device name above: sda sdb sdc sdd
-                                                                         
+                                                                            
     TEST number of your Disk : 4
-                                                                         
+                                                                          
     Input Device Name:  sda 
     RAW Date Value - PROCESSING                        
-    -------------------------------------------------------------------------
-    on_time: 1994  wear_count: 99  lbs_written: 3968445094
-     Spin_Up_Time   Start_Stop_Count: 
-     TBW-usage: 1892.3 GB [ 1.84795 TB ]
-     TBW  Device Name: SamsungSSD860PRO  sda test completed
+    -------------------------------------------------------
+    on_time: 1995  Power_Cycle_Count 509
+    SDD Value - Wear_Leveling_Count: 9 POR_Recovery_Count: 82 lbs_written: 3968714882
+    HDD Value - Spin_Up_Time:  Start_Stop_Count: 
+    TBW-usage: 1892.43 GB [ 1.84808 TB ]
+    TBW Device Name: SamsungSSD860PRO  sda test completed
     -------------------------------------------------------
     Input Device Name:  sdb 
     RAW Date Value - PROCESSING                        
-    -------------------------------------------------------------------------
-    on_time: 340  wear_count:   lbs_written: 
-     Spin_Up_Time   Start_Stop_Count: 188
-     TBW-usage:  GB [ 0 TB ]
-     TBW  Device Name: HGSTHUS722T1TALA604  sdb test completed
+    -------------------------------------------------------
+    on_time: 342  Power_Cycle_Count 185
+    SDD Value - Wear_Leveling_Count:  POR_Recovery_Count:  lbs_written: 
+    HDD Value - Spin_Up_Time: 3783 Start_Stop_Count: 188
+    TBW-usage:  GB [ 0 TB ]
+    TBW Device Name: HGSTHUS722T1TALA604  sdb test completed
     -------------------------------------------------------
     Input Device Name:  sdc 
     RAW Date Value - PROCESSING                        
-    -------------------------------------------------------------------------
-    on_time: 199  wear_count:   lbs_written: 
-     Spin_Up_Time   Start_Stop_Count: 74
-     TBW-usage:  GB [ 0 TB ]
-     TBW  Device Name: HGSTHUS722T1TALA604  sdc test completed
+    -------------------------------------------------------
+    on_time: 201  Power_Cycle_Count 70
+    SDD Value - Wear_Leveling_Count:  POR_Recovery_Count:  lbs_written: 
+    HDD Value - Spin_Up_Time: 3791 Start_Stop_Count: 74
+    TBW-usage:  GB [ 0 TB ]
+    TBW Device Name: HGSTHUS722T1TALA604  sdc test completed
     -------------------------------------------------------
     Input Device Name:  sdd 
     RAW Date Value - PROCESSING                        
-    -------------------------------------------------------------------------
-    on_time: 182  wear_count:   lbs_written: 
-     Spin_Up_Time   Start_Stop_Count: 74
-     TBW-usage:  GB [ 0 TB ]
-     TBW  Device Name: HGSTHUS722T1TALA604  sdd test completed
     -------------------------------------------------------
-    S-I-A-T-B-W-Program-Terminated-------------------------💗system by simmon
+    on_time: 184  Power_Cycle_Count 71
+    SDD Value - Wear_Leveling_Count:  POR_Recovery_Count:  lbs_written: 
+    HDD Value - Spin_Up_Time: 3800 Start_Stop_Count: 74
+    TBW-usage:  GB [ 0 TB ]
+    TBW Device Name: HGSTHUS722T1TALA604  sdd test completed
+    -------------------------------------------------------
+     S I A T B W Program Terminated! ------------------------  💗system by simmon 
