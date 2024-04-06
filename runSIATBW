@@ -45,7 +45,7 @@ echo "-------------------------------------------------------"
   Power_Cycle_Count=`echo "$BASinfo"|awk '/Power_Cycle_Count/ {print $10}'`
   TBW=`echo $rawinfo|awk '{print $1/1024}'`
   printf "${RED}on_time: ${on_time} ${WHITE} wear_count: $wear_count  lbs_written: $lbs_written\n"
-  printf " Spin_Up_Time $Spin_Up_Time  Start_Stop_Count: $Start_Stop_Count\n"
+  printf " Spin_Up_Count $Spin_Up_Count  Start_Stop_Count: $Start_Stop_Count\n"
   printf "${BLUE} TBW-usage: $rawinfo GB ${RED}[ $TBW TB ]\n"  printf "${WHITE} TBW  Device Name: ${NAME} ${GREEN} ${SYDND} ${WHITE}test completed\n"
   printf "${WHITE} -------------------------------------------------------\n"
 done
