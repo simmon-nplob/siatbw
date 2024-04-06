@@ -53,7 +53,7 @@ echo "-------------------------------------------------------------------------"
   NV_READ=`echo "$BASinfo"|awk '/Data Units Read/ {print $5 $6}'`
   TBW=`echo $rawinfo|awk '{print $1/1024}'`
 
-  printf "on_time: ${RED} ${NV_On_Time} ${On_Time} ${WHITE} Power_Cycle_Count: ${BLUE} ${NV_Power} ${Power_Cycle} ${WHITE}\n"
+  printf "On_Time: ${RED} ${NV_On_Time} ${On_Time} ${WHITE} Power_Cycle_Count: ${BLUE} ${NV_Power} ${Power_Cycle} ${WHITE}\n"
   printf "NVME Disk - DATA Units Written: ${BLUE} ${NV_WRITE} ${WHITE} DATA Units Read: ${BLUE} ${NV_READ} ${WHITE}\n"
   printf "SDD  Disk - Wear_Leveling_Count: ${BLUE} ${Wear_Count} ${WHITE} POR_Recovery_Count: ${BLUE} ${POR_Count} ${WHITE} lbs_written:${BLUE} ${Lbs_Written} ${WHITE}\n"
   printf "HDD  Disk - Spin_Up_Time: ${BLUE} ${Spin_Up_Time} ${WHITE} Start_Stop_Count: ${BLUE} ${Start_Stop_Count} ${WHITE}\n"
