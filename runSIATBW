@@ -41,7 +41,7 @@ echo "-------------------------------------------------------"
   wear_count=`echo "$BASinfo"|awk '/Wear_Leveling_Count/ {print $10}'`
   lbs_written=`echo "$BASinfo"|awk '/Total_LBAs_Written/ {print $10}'`
   Start_Stop_Count=`echo "$BASinfo"|awk '/Start_Stop_Count/ {print $10}'`
-  Spin_Up_Count=`echo "$BASinfo"|awk '/Power_Cycle_Count/ {print $10}'`
+  Spin_Up_Count=`echo "$BASinfo"|awk '/Spin_Up_Count/ {print $10}'`
   Power_Cycle_Count=`echo "$BASinfo"|awk '/Power_Cycle_Count/ {print $10}'`
   TBW=`echo $rawinfo|awk '{print $1/1024}'`
   printf "${RED}on_time: ${on_time} ${WHITE} wear_count: $wear_count  lbs_written: $lbs_written\n"
