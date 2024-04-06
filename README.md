@@ -6,7 +6,7 @@
     You can easily check and confirm multiple disks mounted at once.
     This program was created so that it can be checked at once using the smartctl program.
 
-    #chmod u+x runSIATBW
+    # chmod u+x runSIATBW
     # cp runSIATBW /usr/bin/
     # runSIATBW
 
