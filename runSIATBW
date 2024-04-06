@@ -38,7 +38,7 @@ echo "-------------------------------------------------------"
   rawinfo=`echo "$BASinfo"|awk '/Total_LBAs_Written/ {print $10*512/1024/1024/1024}'`
   NAME=`echo "$BASinfo"|awk '/Device Model/ {print $3 $4 $5 $6}'`
   on_time=`echo "$BASinfo"|awk '/Power_On_Hours/ {print $10}'`
-  wear_count=`echo "$BASinfo"|awk '/Wear_Leveling_Count/ {print $4}' | sed 's/^0*//'`
+  wear_count=`echo "$BASinfo"|awk '/Wear_Leveling_Count/ {print $10}'`
   lbs_written=`echo "$BASinfo"|awk '/Total_LBAs_Written/ {print $10}'`
   Start_Stop_Count=`echo "$BASinfo"|awk '/Start_Stop_Count/ {print $10}'`
   Spin_Up_Count=`echo "$BASinfo"|awk '/Power_Cycle_Count/ {print $10}'`
@@ -47,6 +47,6 @@ echo "-------------------------------------------------------"
   printf "${RED}on_time: ${on_time} ${WHITE} wear_count: $wear_count  lbs_written: $lbs_written\n"
   printf " Spin_Up_Time $Spin_Up_Time  Start_Stop_Count: $Start_Stop_Count\n"
   printf "${BLUE} TBW-usage: $rawinfo GB ${RED}[ $TBW TB ]\n"  printf "${WHITE} TBW  Device Name: ${NAME} ${GREEN} ${SYDND} ${WHITE}test completed\n"
-echo "-------------------------------------------------------"
+  printf "-------------------------------------------------------${WHITE}\n"
 done
-echo "S-I-A-T-B-W-Program-Terminated-------------------------💗system by simmon"
+  printf "S I A T B W Program Terminated-------------------------💗system by simmon$ {WHITE}\n"
