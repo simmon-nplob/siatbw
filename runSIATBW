@@ -48,7 +48,7 @@ echo "-------------------------------------------------------"
   printf "${RED}on_time: ${On_Time} ${WHITE} Power_Cycle_Count ${Power_Cycle_Count}\n"
   printf "SDD Value - Wear_Leveling_Count: ${Wear_Count} POR_Recovery_Count: ${POR_Count} lbs_written: ${Lbs_Written}\n"
   printf "HDD Value - Spin_Up_Time: ${Spin_Up_Time} Start_Stop_Count: ${Start_Stop_Count}\n"
-  printf "${BLUE} TBW-usage: $rawinfo GB ${RED}[ $TBW TB ]\n"
+  printf "${BLUE}TBW-usage: $rawinfo GB ${RED}[ $TBW TB ]\n"
   printf "${WHITE}TBW Device Name: ${NAME} ${GREEN} ${SYDND} ${WHITE}test completed\n"
 echo "-------------------------------------------------------"
 done
