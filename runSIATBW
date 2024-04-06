@@ -47,6 +47,6 @@ echo "-------------------------------------------------------"
   printf "${RED}on_time: ${on_time} ${WHITE} wear_count: $wear_count  lbs_written: $lbs_written\n"
   printf " Spin_Up_Time $Spin_Up_Time  Start_Stop_Count: $Start_Stop_Count\n"
   printf "${BLUE} TBW-usage: $rawinfo GB ${RED}[ $TBW TB ]\n"  printf "${WHITE} TBW  Device Name: ${NAME} ${GREEN} ${SYDND} ${WHITE}test completed\n"
-  printf "------------------------------------------------------- ${WHITE}\n"
+  printf "${WHITE} -------------------------------------------------------\n"
 done
-  printf "S I A T B W Program Terminated-------------------------💗system by simmon ${WHITE}\n"
+  printf " S I A T B W Program Terminated! ------------------------ ${WHITE} 💗system by simmon ${WHITE}\n"
