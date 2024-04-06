@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# system by simmon
+# simmon@nplob.com 
+
+# siatbw program color code set.
+RED='\033[0;31m'          # RED 빨강
+BLUE='\033[0;34m'         # BLUE 파랑
+WHITE='\033[0;37m'        # WHITE 하얀색
+GREEN='\033[0;32m'        # GREEN 녹색
+
+# program run.
+echo "SCAN Your Disk INFO"
+echo "staus sata or sas"
+fdisk -l|grep "/dev/sd"|grep Disk|cut -d '/' -f3
+echo "-------------------------------------------------------------------------"
+echo "status nvme"
+fdisk -l|grep "/dev/nv"|grep Disk|cut -d '/' -f3
+echo "-------------------------------------------------------------------------"
+echo "                                                                         "
+
+printf "CHECK or SCAN Disk Name ${RED} sda sdb ${WHITE}\n"
+
+  printf "OK, Enter your device name above: "
+read -a SYDND
+
+echo "                                                                         "
+echo "TEST number of your Disk : ${#SYDND[*]}"
+echo "                                                                         "
+
+for SYDND in "${SYDND[@]}"
+
+do
+  printf "${white}Input Device Name: ${GREEN} $SYDND ${WHITE}\n"
+  printf "RAW Date Value - PROCESSING                        \n"
+echo "-------------------------------------------------------"
+  BASinfo=$(smartctl -a /dev/${SYDND})
+  rawinfo=`echo "$BASinfo"|awk '/Total_LBAs_Written/ {print $10*512/1024/1024/1024}'`
+  NAME=`echo "$BASinfo"|awk '/Device Model/ {print $3 $4 $5 $6}'`
+  on_time=`echo "$BASinfo"|awk '/Power_On_Hours/ {print $10}'`
+  wear_count=`echo "$BASinfo"|awk '/Wear_Leveling_Count/ {print $4}' | sed 's/^0*//'`
+  lbs_written=`echo "$BASinfo"|awk '/Total_LBAs_Written/ {print $10}'`
+  Start_Stop_Count=`echo "$BASinfo"|awk '/Start_Stop_Count/ {print $10}'`
+  Spin_Up_Count=`echo "$BASinfo"|awk '/Power_Cycle_Count/ {print $10}'`
+  Power_Cycle_Count=`echo "$BASinfo"|awk '/Power_Cycle_Count/ {print $10}'`
+  TBW=`echo $rawinfo|awk '{print $1/1024}'`
+  printf "${RED}on_time: ${on_time} ${WHITE} wear_count: $wear_count  lbs_written: $lbs_written\n"
+  printf " Spin_Up_Time $Spin_Up_Time  Start_Stop_Count: $Start_Stop_Count\n"
+  printf "${BLUE} TBW-usage: $rawinfo GB ${RED}[ $TBW TB ]\n"  printf "${WHITE} TBW  Device Name: ${NAME} ${GREEN} ${SYDND} ${WHITE}test completed\n"
+echo "-------------------------------------------------------"
+done
+echo "S-I-A-T-B-W-Program-Terminated-------------------------💗system by simmon"
