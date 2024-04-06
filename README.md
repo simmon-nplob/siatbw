@@ -11,55 +11,74 @@
     # runSIATBW
 
     root@missA:/home/simmon/siatbw# ./runSIATBW 
+ 
     SCAN Your Disk INFO
+    status nvme
+    -------------------------------------------------------------------------
+    nvme0n1: 119.24 GiB, 128035676160 bytes, 250069680 sectors
+    -------------------------------------------------------------------------
     staus sata or sas
-    sda: 238.47 GiB, 256060514304 bytes, 500118192 sectors
     sdb: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
+    sda: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
     sdc: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
     sdd: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
     -------------------------------------------------------------------------
-    status nvme
-    -------------------------------------------------------------------------
+                                                                    
+    CHECK or SCAN Disk Name  sda sdb sdc 
+    OK, Enter your device name above: nvme0n1 sda sdb sdc sdd
+    Show - input Disk: nvme0n1                                                                         
+    TEST number of your Disk : 5
                                                                          
-    CHECK or SCAN Disk Name  sda sdb 
-    OK, Enter your device name above: sda sdb sdc sdd
-                                                                            
-    TEST number of your Disk : 4
-                                                                          
+    -------------------------------------------------------------------------
+    -------------------------------------------------------------------------
+    Input Device Name:  nvme0n1 
+    RAW Date Value - PROCESSING                       
+    On_Time:  4   Power_Cycle_Count:  64  
+    NVME Disk - DATA Units Written:  [287GB]  DATA Units Read:  [312GB] 
+    SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
+    HDD  Disk - Spin_Up_Time:    Start_Stop_Count:   
+    TBW-usage:  GB [ 0 TB ] 
+    TBW Device Name:  SAMSUNGMZVLQ128HCHQ-00B   nvme0n1 test completed
+    -------------------------------------------------------------------------
+    -------------------------------------------------------------------------
     Input Device Name:  sda 
-    RAW Date Value - PROCESSING                        
-    -------------------------------------------------------
-    on_time: 1995  Power_Cycle_Count 509
-    SDD Value - Wear_Leveling_Count: 9 POR_Recovery_Count: 82 lbs_written: 3968714882
-    HDD Value - Spin_Up_Time:  Start_Stop_Count: 
-    TBW-usage: 1892.43 GB [ 1.84808 TB ]
-    TBW Device Name: SamsungSSD860PRO  sda test completed
-    -------------------------------------------------------
+    RAW Date Value - PROCESSING                       
+    On_Time:   2145  Power_Cycle_Count:   188 
+    NVME Disk - DATA Units Written:    DATA Units Read:   
+    SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
+    HDD  Disk - Spin_Up_Time:  3825  Start_Stop_Count:  188 
+    TBW-usage:  GB [ 0 TB ] 
+    TBW Device Name:   HGSTHUS722T1TALA604  sda test completed
+    -------------------------------------------------------------------------
+    -------------------------------------------------------------------------
     Input Device Name:  sdb 
-    RAW Date Value - PROCESSING                        
-    -------------------------------------------------------
-    on_time: 342  Power_Cycle_Count 185
-    SDD Value - Wear_Leveling_Count:  POR_Recovery_Count:  lbs_written: 
-    HDD Value - Spin_Up_Time: 3783 Start_Stop_Count: 188
-    TBW-usage:  GB [ 0 TB ]
-    TBW Device Name: HGSTHUS722T1TALA604  sdb test completed
-    -------------------------------------------------------
+    RAW Date Value - PROCESSING                       
+    On_Time:   2145  Power_Cycle_Count:   174 
+    NVME Disk - DATA Units Written:    DATA Units Read:   
+    SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
+    HDD  Disk - Spin_Up_Time:  3833  Start_Stop_Count:  174 
+    TBW-usage:  GB [ 0 TB ] 
+    TBW Device Name:   HGSTHUS722T1TALA604  sdb test completed
+    -------------------------------------------------------------------------
+    -------------------------------------------------------------------------
     Input Device Name:  sdc 
-    RAW Date Value - PROCESSING                        
-    -------------------------------------------------------
-    on_time: 201  Power_Cycle_Count 70
-    SDD Value - Wear_Leveling_Count:  POR_Recovery_Count:  lbs_written: 
-    HDD Value - Spin_Up_Time: 3791 Start_Stop_Count: 74
-    TBW-usage:  GB [ 0 TB ]
-    TBW Device Name: HGSTHUS722T1TALA604  sdc test completed
-    -------------------------------------------------------
+    RAW Date Value - PROCESSING                       
+    On_Time:   2155  Power_Cycle_Count:   196 
+    NVME Disk - DATA Units Written:    DATA Units Read:   
+    SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
+    HDD  Disk - Spin_Up_Time:  3900  Start_Stop_Count:  196 
+    TBW-usage:  GB [ 0 TB ] 
+    TBW Device Name:   HGSTHUS722T1TALA604  sdc test completed
+    -------------------------------------------------------------------------
+    -------------------------------------------------------------------------
     Input Device Name:  sdd 
-    RAW Date Value - PROCESSING                        
-    -------------------------------------------------------
-    on_time: 184  Power_Cycle_Count 71
-    SDD Value - Wear_Leveling_Count:  POR_Recovery_Count:  lbs_written: 
-    HDD Value - Spin_Up_Time: 3800 Start_Stop_Count: 74
-    TBW-usage:  GB [ 0 TB ]
-    TBW Device Name: HGSTHUS722T1TALA604  sdd test completed
-    -------------------------------------------------------
+    RAW Date Value - PROCESSING                       
+    On_Time:   2146  Power_Cycle_Count:   178 
+    NVME Disk - DATA Units Written:    DATA Units Read:   
+    SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
+    HDD  Disk - Spin_Up_Time:  3833  Start_Stop_Count:  178 
+    TBW-usage:  GB [ 0 TB ] 
+    TBW Device Name:   HGSTHUS722T1TALA604  sdd test completed
+    -------------------------------------------------------------------------
      S I A T B W Program Terminated! ------------------------  💗system by simmon 
+     
