@@ -23,7 +23,7 @@ echo "                                                                    "
   printf "CHECK or SCAN Disk Name ${GREEN} sda sdb sdc ${WHITE}\n"
   printf "OK, Enter your device name above: ${BLUE}"
 read -a SYDND
-  printf "${WHITE} Show - input Disk: ${SYDND}"
+  printf "${WHITE}Show - input Disk: ${SYDND}"
 echo "                                                                         "
 echo "TEST number of your Disk : ${#SYDND[*]}"
 echo "                                                                         "
