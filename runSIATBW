@@ -20,16 +20,17 @@ fdisk -l|grep "/dev/sd"|grep Disk|cut -d '/' -f3
 echo "-------------------------------------------------------------------------"
 echo "                                                                    "
 
-printf "CHECK or SCAN Disk Name ${RED} sda sdb ${WHITE}\n"
-
-  printf "OK, Enter your device name above: "
+  printf "CHECK or SCAN Disk Name ${GREEN} sda sdb sdc ${WHITE}\n"
+  printf "OK, Enter your device name above: ${BLUE}"
 read -a SYDND
-
+  printf "${WHITE} Show - input Disk: ${SYDND}"
 echo "                                                                         "
 echo "TEST number of your Disk : ${#SYDND[*]}"
 echo "                                                                         "
+echo "-------------------------------------------------------------------------"
 
 for SYDND in "${SYDND[@]}"
+
 
 do
 
