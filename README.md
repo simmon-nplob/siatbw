@@ -2,7 +2,7 @@
     한번에 장착된 다수의 디스크를 쉽게 점검하고 확인 할 수 있습니다
     해당 프로그램은 smartctl 프로그램을 활용하여 한번에 확인하고자 작성하였습니다.
 
-    시험된 OS: Rehel9.3 계열/Rocky9.3, Fedora 40 Server
+    시험된 OS: Rehel9.3 계열/Rocky9.3, Centos7, Fedora 40 Server
 
     This is a written in Bashell program for disk check status - lifetime and operating time.
     You can easily check and confirm multiple disks mounted at once.
