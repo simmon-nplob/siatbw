@@ -13,74 +13,69 @@
     # runSIATBW
 
     root@missA:/home/simmon/siatbw# ./runSIATBW 
- 
     SCAN Your Disk INFO
     status nvme
     -------------------------------------------------------------------------
-    nvme0n1: 119.24 GiB, 128035676160 bytes, 250069680 sectors
     -------------------------------------------------------------------------
     staus sata or sas
+    sda: 238.47 GiB, 256060514304 bytes, 500118192 sectors
     sdb: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
-    sda: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
     sdc: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
     sdd: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
     -------------------------------------------------------------------------
-                                                                    
+                                                                        
     CHECK or SCAN Disk Name  sda sdb sdc 
-    OK, Enter your device name above: nvme0n1 sda sdb sdc sdd
-    Show - input Disk: nvme0n1                                                                         
-    TEST number of your Disk : 5
-                                                                         
-    -------------------------------------------------------------------------
-    -------------------------------------------------------------------------
-    Input Device Name:  nvme0n1 
-    RAW Date Value - PROCESSING                       
-    On_Time:  4   Power_Cycle_Count:  64  
-    NVME Disk - DATA Units Written:  [287GB]  DATA Units Read:  [312GB] 
-    SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
-    HDD  Disk - Spin_Up_Time:    Start_Stop_Count:   
-    TBW-usage:  GB [ 0 TB ] 
-    TBW Device Name:  SAMSUNGMZVLQ128HCHQ-00B   nvme0n1 test completed
+    OK, Enter your device name above: sda sdb sdc sdd
+    Show - input Disk: sda                                                                         
+    TEST number of your Disk : 4
+                                                                             
     -------------------------------------------------------------------------
     -------------------------------------------------------------------------
     Input Device Name:  sda 
     RAW Date Value - PROCESSING                       
-    On_Time:   2145  Power_Cycle_Count:   188 
+    On_Time:   2001  Power_Cycle_Count:   510 
     NVME Disk - DATA Units Written:    DATA Units Read:   
-    SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
-    HDD  Disk - Spin_Up_Time:  3825  Start_Stop_Count:  188 
-    TBW-usage:  GB [ 0 TB ] 
-    TBW Device Name:   HGSTHUS722T1TALA604  sda test completed
+    SDD  Disk - Wear_Leveling_Count:  9  POR_Recovery_Count:  82  lbs_written: 3975518361 
+    HDD  Disk - Spin_Up_Time:    Start_Stop_Count:   
+    TBW-usage: 1895.67 GB [ 1.85124 TB ] 
+     ERROR Indicator Value -> RAW_Read_Error_Rate:    Reallocated_Sector_Ct: 0  Seek_Error_Rate:  
+     Spin_Retry_Count:    Current_Pending_Sector:   Offline_Uncorrectable:    UDMA_CRC_Error_Count:  
+    TBW Device Name:   SamsungSSD860PRO  sda test completed
     -------------------------------------------------------------------------
     -------------------------------------------------------------------------
     Input Device Name:  sdb 
     RAW Date Value - PROCESSING                       
-    On_Time:   2145  Power_Cycle_Count:   174 
+    On_Time:   347  Power_Cycle_Count:   186 
     NVME Disk - DATA Units Written:    DATA Units Read:   
     SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
-    HDD  Disk - Spin_Up_Time:  3833  Start_Stop_Count:  174 
+    HDD  Disk - Spin_Up_Time:  3775  Start_Stop_Count:  189 
     TBW-usage:  GB [ 0 TB ] 
+     ERROR Indicator Value -> RAW_Read_Error_Rate:  0  Reallocated_Sector_Ct: 0  Seek_Error_Rate:  0
+     Spin_Retry_Count:  0  Current_Pending_Sector: 0  Offline_Uncorrectable:  0  UDMA_CRC_Error_Count:  0
     TBW Device Name:   HGSTHUS722T1TALA604  sdb test completed
     -------------------------------------------------------------------------
     -------------------------------------------------------------------------
     Input Device Name:  sdc 
     RAW Date Value - PROCESSING                       
-    On_Time:   2155  Power_Cycle_Count:   196 
+    On_Time:   206  Power_Cycle_Count:   71 
     NVME Disk - DATA Units Written:    DATA Units Read:   
     SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
-    HDD  Disk - Spin_Up_Time:  3900  Start_Stop_Count:  196 
+    HDD  Disk - Spin_Up_Time:  3791  Start_Stop_Count:  75 
     TBW-usage:  GB [ 0 TB ] 
+     ERROR Indicator Value -> RAW_Read_Error_Rate:  0  Reallocated_Sector_Ct: 0  Seek_Error_Rate:  0
+     Spin_Retry_Count:  0  Current_Pending_Sector: 0  Offline_Uncorrectable:  0  UDMA_CRC_Error_Count:  0
     TBW Device Name:   HGSTHUS722T1TALA604  sdc test completed
     -------------------------------------------------------------------------
     -------------------------------------------------------------------------
     Input Device Name:  sdd 
     RAW Date Value - PROCESSING                       
-    On_Time:   2146  Power_Cycle_Count:   178 
+    On_Time:   189  Power_Cycle_Count:   72 
     NVME Disk - DATA Units Written:    DATA Units Read:   
     SDD  Disk - Wear_Leveling_Count:    POR_Recovery_Count:    lbs_written:  
-    HDD  Disk - Spin_Up_Time:  3833  Start_Stop_Count:  178 
+    HDD  Disk - Spin_Up_Time:  3800  Start_Stop_Count:  75 
     TBW-usage:  GB [ 0 TB ] 
+     ERROR Indicator Value -> RAW_Read_Error_Rate:  0  Reallocated_Sector_Ct: 0  Seek_Error_Rate:  0
+     Spin_Retry_Count:  0  Current_Pending_Sector: 0  Offline_Uncorrectable:  0  UDMA_CRC_Error_Count:  0
     TBW Device Name:   HGSTHUS722T1TALA604  sdd test completed
     -------------------------------------------------------------------------
-     S I A T B W Program Terminated! ------------------------  💗system by simmon 
-     
+     S I A T B W Program Terminated! ------------------------  💗system by simmon
