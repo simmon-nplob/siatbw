@@ -69,6 +69,7 @@ echo "-------------------------------------------------------------------------"
   printf "${RED}RAW_Read_Error_Rate: ${BLUE} $RRER ${RED} Reallocated_Sector_Ct: ${BLUE} $RSC ${RED} Seek_Error_Rate: ${BLUE} $SER\n"
   printf "${RED}Spin_Retry_Count: ${BLUE} $SRC ${RED} Current_Pending_Sector: ${BLUE} $CPS ${RED} Offline_Uncorrectable: ${BLUE} ${OU} ${RED}\n"
   printf "${RED}UDMA_CRC_Error_Count: ${BLUE} $UCEC\n"
+  printf "${WHITE}TBW Device Name: ${GREEN} ${NV_Model} ${NAME} ${BLUE} ${SYDND} ${WHITE}test completed\n"
 
 echo "-------------------------------------------------------------------------"
 done
