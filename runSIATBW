@@ -48,7 +48,7 @@ echo "-------------------------------------------------------------------------"
   POR_Count=`echo "$BASinfo"|awk '/POR_Recovery_Count/ {print $10}'`
   NV_On_Time=`echo "$BASinfo"|awk '/Power On Hours/ {print $4}'`
   NV_Power=`echo "$BASinfo"|awk '/Power Cycles/ {print $3}'`
-  NV_Model=`echo "$BASinfo"|awk '/Model Number/ {print $3 $4 $5}'`
+  NV_Model=`echo "$BASinfo"|awk '/Model Number/ {print $3 $4 $5 $6}'`
   NV_WRITE=`echo "$BASinfo"|awk '/Data Units Written/ {print $5 $6}'`
   NV_READ=`echo "$BASinfo"|awk '/Data Units Read/ {print $5 $6}'`
   TBW=`echo $rawinfo|awk '{print $1/1024}'`
