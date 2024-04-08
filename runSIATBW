@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # system by simmon
-# simmon@nplob.com - siatbw-v0.01b
+# simmon@nplob.com - siatbw-v0.01c
 
 # siatbw program color code set.
 RED='\033[0;31m'          # RED 빨강
