@@ -59,14 +59,17 @@ echo "-------------------------------------------------------------------------"
   OU=`echo "$BASinfo"|awk '/Offline_Uncorrectable/ {print $10}'`
   UCEC=`echo "$BASinfo"|awk '/UDMA_CRC_Error_Count/ {print $10}'`
   TBW=`echo $rawinfo|awk '{print $1/1024}'`
+
   printf "On_Time: ${RED} ${NV_On_Time} ${On_Time} ${WHITE} Power_Cycle_Count: ${BLUE} ${NV_Power} ${Power_Cycle} ${WHITE}\n"
   printf "NVME Disk - DATA Units Written: ${BLUE} ${NV_WRITE} ${WHITE} DATA Units Read: ${BLUE} ${NV_READ} ${WHITE}\n"
   printf "SDD  Disk - Wear_Leveling_Count: ${BLUE} ${Wear_Count} ${WHITE} POR_Recovery_Count: ${BLUE} ${POR_Count} ${WHITE} lbs_written:${BLUE} ${Lbs_Written} ${WHITE}\n"
   printf "HDD  Disk - Spin_Up_Time: ${BLUE} ${Spin_Up_Time} ${WHITE} Start_Stop_Count: ${BLUE} ${Start_Stop_Count} ${WHITE}\n"
   printf "${BLUE}TBW-usage: $rawinfo GB ${RED}[ $TBW TB ] ${WHITE}\n"
-  printf "${RED} ERROR Indicator Value -> RAW_Read_Error_Rate: ${BLUE} $RRER ${RED} Reallocated_Sector_Ct: ${BLUE}$RSC ${RED} Seek_Error_Rate: ${BLUE} $SER\n"
-  printf "${RED} Spin_Retry_Count: ${BLUE} $SRC ${RED} Current_Pending_Sector:${BLUE} $CPS ${RED} Offline_Uncorrectable: ${BLUE} ${OU} ${RED} UDMA_CRC_Error_Count: ${BLUE} $UCEC\n"
-  printf "${WHITE}TBW Device Name: ${GREEN} ${NV_Model} ${NAME} ${BLUE} ${SYDND} ${WHITE}test completed\n"
+  printf "${BLUE}ERROR Indicator Value -> \n"
+  printf "${RED}RAW_Read_Error_Rate: ${BLUE} $RRER ${RED} Reallocated_Sector_Ct: ${BLUE} $RSC ${RED} Seek_Error_Rate: ${BLUE} $SER\n"
+  printf "${RED}Spin_Retry_Count: ${BLUE} $SRC ${RED} Current_Pending_Sector: ${BLUE} $CPS ${RED} Offline_Uncorrectable: ${BLUE} ${OU} ${RED}\n"
+  printf "${RED}UDMA_CRC_Error_Count: ${BLUE} $UCEC\n"
+
 echo "-------------------------------------------------------------------------"
 done
   printf " S I A T B W Program Terminated! ------------------------ ${WHITE} 💗system by simmon ${WHITE}\n"
