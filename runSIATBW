@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # system by simmon
-# simmon@nplob.com - siatbw-v0.01c
+# simmon@nplob.com - siatbw-v0.01d
 
 # siatbw program color code set.
 RED='\033[0;31m'          # RED 빨강
@@ -51,15 +51,23 @@ echo "-------------------------------------------------------------------------"
   NV_Model=`echo "$BASinfo"|awk '/Model Number/ {print $3 $4 $5 $6}'`
   NV_WRITE=`echo "$BASinfo"|awk '/Data Units Written/ {print $5 $6}'`
   NV_READ=`echo "$BASinfo"|awk '/Data Units Read/ {print $5 $6}'`
+  RRER=`echo "$BASinfo"|awk '/Raw_Read_Error_Rate/ {print $10}'`
+  RSC=`echo "$BASinfo"|awk '/Reallocated_Sector_Ct/ {print $10}'`
+  SER=`echo "$BASinfo"|awk '/Seek_Error_Rate/ {print $10}'`
+  SRC=`echo "$BASinfo"|awk '/Spin_Retry_Count/ {print $10}'`
+  CPS=`echo "$BASinfo"|awk '/Current_Pending_Sector/ {print $10}'`
+  OU=`echo "$BASinfo"|awk '/Offline_Uncorrectable/ {print $10}'`
+  UCEC=`echo "$BASinfo"|awk '/UDMA_CRC_Error_Count/ {print $10}'`
   TBW=`echo $rawinfo|awk '{print $1/1024}'`
-
   printf "On_Time: ${RED} ${NV_On_Time} ${On_Time} ${WHITE} Power_Cycle_Count: ${BLUE} ${NV_Power} ${Power_Cycle} ${WHITE}\n"
   printf "NVME Disk - DATA Units Written: ${BLUE} ${NV_WRITE} ${WHITE} DATA Units Read: ${BLUE} ${NV_READ} ${WHITE}\n"
   printf "SDD  Disk - Wear_Leveling_Count: ${BLUE} ${Wear_Count} ${WHITE} POR_Recovery_Count: ${BLUE} ${POR_Count} ${WHITE} lbs_written:${BLUE} ${Lbs_Written} ${WHITE}\n"
   printf "HDD  Disk - Spin_Up_Time: ${BLUE} ${Spin_Up_Time} ${WHITE} Start_Stop_Count: ${BLUE} ${Start_Stop_Count} ${WHITE}\n"
   printf "${BLUE}TBW-usage: $rawinfo GB ${RED}[ $TBW TB ] ${WHITE}\n"
+  printf "${RED} ERROR Indicator Value -> RAW_Read_Error_Rate: ${BLUE} $RRER ${RED} Reallocated_Sector_Ct: ${BLUE}$RSC ${RED} Seek_Error_Rate: ${BLUE} $SER\n"
+  printf "${RED} Spin_Retry_Count: ${BLUE} $SRC ${RED} Current_Pending_Sector:${BLUE} $CPS ${RED} Offline_Uncorrectable: ${BLUE} ${OU} ${RED} UDMA_CRC_Error_Count: ${BLUE} $UCEC\n"
   printf "${WHITE}TBW Device Name: ${GREEN} ${NV_Model} ${NAME} ${BLUE} ${SYDND} ${WHITE}test completed\n"
 echo "-------------------------------------------------------------------------"
 done
   printf " S I A T B W Program Terminated! ------------------------ ${WHITE} 💗system by simmon ${WHITE}\n"
-echo "                                                                         "
+echo " 
