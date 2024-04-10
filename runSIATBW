@@ -53,11 +53,13 @@ echo "-------------------------------------------------------------------------"
   NV_READ=`echo "$BASinfo"|awk '/Data Units Read/ {print $5 $6}'`
   RRER=`echo "$BASinfo"|awk '/Raw_Read_Error_Rate/ {print $10}'`
   RSC=`echo "$BASinfo"|awk '/Reallocated_Sector_Ct/ {print $10}'`
+  REC=`echo "$BASinfo"|awk '/Reallocated_Event_Count/ {print $10}'`
   SER=`echo "$BASinfo"|awk '/Seek_Error_Rate/ {print $10}'`
   SRC=`echo "$BASinfo"|awk '/Spin_Retry_Count/ {print $10}'`
   CPS=`echo "$BASinfo"|awk '/Current_Pending_Sector/ {print $10}'`
   OU=`echo "$BASinfo"|awk '/Offline_Uncorrectable/ {print $10}'`
   UCEC=`echo "$BASinfo"|awk '/UDMA_CRC_Error_Count/ {print $10}'`
+  HER=`echo "$BASinfo"|awk '/Hardware_ECC_Recovered/ {print $10}'`
   TBW=`echo $rawinfo|awk '{print $1/1024}'`
 
   printf "On_Time: ${RED} ${NV_On_Time} ${On_Time} ${WHITE} Power_Cycle_Count: ${BLUE} ${NV_Power} ${Power_Cycle} ${WHITE}\n"
@@ -68,7 +70,7 @@ echo "-------------------------------------------------------------------------"
   printf "${BLUE}ERROR Indicator Value -> \n"
   printf "${RED}RAW_Read_Error_Rate: ${BLUE} $RRER ${RED} Reallocated_Sector_Ct: ${BLUE} $RSC ${RED} Seek_Error_Rate: ${BLUE} $SER\n"
   printf "${RED}Spin_Retry_Count: ${BLUE} $SRC ${RED} Current_Pending_Sector: ${BLUE} $CPS ${RED} Offline_Uncorrectable: ${BLUE} ${OU} ${RED}\n"
-  printf "${RED}UDMA_CRC_Error_Count: ${BLUE} $UCEC\n"
+  printf "${RED}UDMA_CRC_Error_Count: ${BLUE} $UCEC ${RED}Reallocated_Event_Count: ${BLUE} $REC ${RED} Hardware_ECC_Recovered: ${BLUE} ${HER}\n"
   printf "${WHITE}TBW Device Name: ${GREEN} ${NV_Model} ${NAME} ${BLUE} ${SYDND} ${WHITE}test completed\n"
 
 echo "-------------------------------------------------------------------------"
